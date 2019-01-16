@@ -1,0 +1,99 @@
+@import './global.less';
+
+body {
+  position: relative;
+  background-color: #F0F0F0;
+}
+
+.image-display-container {
+  position: relative;
+  margin-top: 15px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-image: none;
+  background-color: #FFF;
+
+  img {
+    position: absolute;
+  }
+
+  .image-select.left &.empty-container,
+  .image-select.right &.empty-container {
+    background-repeat: no-repeat;
+    background-position: center ~'calc(50% + 24px)';
+    background-size: percentage(207/375) auto;
+
+    &:before {
+      position: absolute;
+      width: 100%;
+      top: 14%;
+      text-align: center;
+      color: #B5B5B5;
+    }
+  }
+
+  .image-select.left &.empty-container {
+    background-image: url(../assets/images/deadcow.png);
+
+    &:before {
+      content: '1.上传死亡标的图片'
+    }
+  }
+
+  &:before {
+    content: none;
+  }
+
+  .image-select.right &.empty-container {
+    background-image: url(../assets/images/samplecow.png);
+
+    &:before {
+      content: '2.上传标的承保图片'
+    }
+  }
+  
+  &:after {
+    content: '';
+    padding-top: percentage(230/335);
+    display: block;
+  }
+}
+
+.loading-modal.am-modal.am-modal-transparent {
+  width: 140px;
+
+  .am-modal-content {
+    padding: 10px;
+  }
+}
+
+.image-compare {
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, ~'calc(-50% - 31px)');
+}
+
+.rect-face {
+  position: absolute;
+  border: 1px solid #658AF1;
+}
+
+.image-empty {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  transform: translateY(-50%);
+  text-align: center;
+  color: #B5B5B5;
+  line-height: 200%;
+}
+
+@import '~antd-mobile/es/style/index.less';
+@import '~antd-mobile/es/wing-blank/style/index.less';
+@import '~antd-mobile/es/toast/style/index.less';
+@import '~antd-mobile/es/button/style/index.less';
+@import '~antd-mobile/es/icon/style/index.less';
+@import '~antd-mobile/es/modal/style/index.less';

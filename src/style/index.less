@@ -1,0 +1,58 @@
+@import './global.less';
+
+.container {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+header {
+  line-height: 60px;
+  background-color: rgba(0, 21, 41, 1);
+  color: #FFF;
+
+  span.logo {
+    margin-right: 40px;
+  }
+}
+
+div.body {
+  display: flex;
+  flex-direction: row;
+  margin-top: 60px;
+  
+  > div:nth-child(1),
+  > div:nth-child(3) {
+    flex: 1;
+  }
+
+  > div:nth-child(2) {
+    flex: 0 0 300px;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.loading-modal.ant-modal {
+  top: 50%;
+  margin-top: -50px;
+}
+
+.confirm-modal.ant-modal {
+  top: 30%;
+
+  .ant-modal-body {
+    font-size: 14px;
+    padding: 40px 16px 40px 30px;
+  }
+}
+
+
+@import '~antd/es/style/core/index.less';
+@import '~antd/es/button/style/index.less';
+@import '~antd/es/modal/style/index.less';
+
+@import './components/image-select.less';
+@import './components/image-gallery.less';

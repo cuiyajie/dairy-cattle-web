@@ -1,0 +1,10 @@
+dist
+node_modules
+.DS_Store
+*.map
+src/**/*.jsx
+src/**/*.js
+tags/
+.idea
+dist
+npm-debug.log

@@ -1,0 +1,48 @@
+.image-select {
+  text-align: center;
+
+  .image-gallery {
+    margin-top: 30px;
+  }
+
+  .image-display-container {
+    height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F5F5F5;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    overflow: hidden;
+    position: relative;
+
+    img {
+      position: absolute;
+    }
+  }
+
+  .image-empty {
+    color: #999;
+    i.anticon {
+      margin-bottom: 15px
+    }
+  }
+
+  canvas {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.image-compare {
+  height: 400px;
+  align-items: center;
+}
+
+.rect-face {
+  position: absolute;
+  border: 1px solid #658AF1;
+}
